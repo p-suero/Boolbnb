@@ -1,0 +1,365 @@
+body#bk-office {
+    font-family: $font-family-sans-serif;
+    font-size: 16px;
+
+    a {
+        color: inherit;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    header {
+        width: 100%;
+        height: 90px;
+        padding: 15px 0;
+        color: #222222;
+
+        #header-left {
+            width: 30%;
+
+            .logo-container {
+                padding: 5px 0;
+            }
+        }
+
+        #header-right {
+            width: 60%;
+
+            ul {
+                margin: 0;
+
+                li {
+                    display: inline-block;
+                    margin-left: 25px;
+                    cursor: pointer;
+
+                    a {
+                        position: relative;
+
+                        &:after {
+                            content: "";
+                            display: inline-block;
+                            position: absolute;
+                            width: 0;
+                            height: 2px;
+                            background-color: #FF385C;
+                            top: 100%;
+                            left: 0;
+                            transition: width 1s;
+                        }
+
+                        &:hover:after {
+                            width: 100%;
+                        }
+
+                        span {
+                            padding-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    aside {
+        padding: 15px 5px;
+        width: 250px;
+        position: fixed;
+        top: 90px;
+        transform: translate3d(-100%,0,0);
+        height: calc(100vh - 90px);
+        background-color: #F7F7F7;
+        border-radius: 0 25px 0 0;
+        transition: transform 1s ease-out;
+        overflow-y: auto;
+
+        &.active {
+            transform: translate3d(0,0,0);
+            box-shadow: 10px 15px 19px -18px rgba(255,56,92,0.92);
+            z-index: 999;
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: none;
+            margin-top: 30px;
+
+            li {
+                margin: 20px 0;
+                padding: 5px 8px;
+                border-radius: 20px;
+                transition: background-color 0.5s;
+
+                &.active,
+                &:hover {
+                    background-color: #FF385C;
+                }
+
+                a {
+                    display: block;
+                }
+
+                i {
+                    width: 18px;
+                    height: 20px;
+                    text-align: center;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+
+    main {
+        width: 100%;
+        height: calc(100vh - 90px);
+        padding: 50px 0;
+        overflow-y: auto;
+    }
+}
+/*********************Pagina-Show*********************/
+#show-header-right {
+    margin-bottom: 30px;
+    text-align: right;
+}
+
+#detail-title {
+    margin-bottom: 30px;
+}
+
+#visibility-switch {
+    display: inline-block;
+    margin-right: 20px;
+
+    .custom-control-input:checked ~ .custom-control-label::before {
+        color: #fff;
+        border-color: #FF385C;
+        background-color: #FF385C;
+    }
+}
+
+#show-header .btn {
+    padding: 6px;
+}
+
+#modify-button,
+#sponsorship-button {
+    margin: 0 5px;
+    border: 1px solid #FF385C;
+}
+
+#delete-button {
+    margin: 0 5px;
+    color: white;
+    background-color: #FF385C;
+    border: 1px solid #FF385C;
+}
+
+#show-image {
+    height: 300px;
+    border: 1px solid red;
+    margin-bottom: 30px;
+    padding: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+#show-description {
+    padding-left: 20px;
+    font-weight: bold;
+
+    span {
+        font-weight: lighter;
+    }
+}
+
+#show-info {
+    ul {
+        font-weight: bold;
+
+        &:before {
+            content: attr(aria-label);
+            font-size: 120%;
+            font-weight: bold;
+            margin-left: -15px;
+        }
+    }
+
+    span {
+        font-weight: lighter;
+    }
+}
+
+#show-services {
+    ul {
+        &:before {
+            content: attr(aria-label);
+            font-size: 120%;
+            font-weight: bold;
+            margin-left: -15px;
+        }
+    }
+}
+
+#show-map {
+    border: 1px solid $main_color;
+    padding: 0;
+    height: 500px;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+#guest-show-form-title {
+    margin-bottom: 20px;
+}
+
+#guest-show-form-submit {
+    background-color: $main_color;
+    border: 1px solid $main_color;
+    margin-bottom: 20px;
+}
+/*********************Fine-Pagina-Show*********************/
+//*inizio sezione aggiungi appartamento
+
+form {
+    text-align: center;
+}
+
+#description-apartment {
+    border-color: rgba(72, 72, 72, 0.2);
+}
+
+.input-group {
+    margin-top: 20px;
+
+    #add_address {
+        color: white;
+        background-color: $main_color;
+    }
+}
+
+.add-apartment {
+    background-color: $main_color;
+    border-color: $main_color;
+    height: 50px;
+    width: 40%;
+    margin-top: 2rem;
+}
+
+#services {
+    max-width: 100%;
+}
+
+.btn-primary:focus,
+.btn-primary:hover,
+.btn-primary:not(:disabled):not(.disabled):active {
+    color: white;
+    background-color: $main_color;
+    border-color: $main_color;
+}
+
+.input-wrapper {
+    ul {
+        li {
+            list-style-type: none;
+        }
+    }
+}
+
+#sponsorship {
+
+    ul {
+        text-align: left;
+    }
+
+    h3 {
+    margin-bottom: 30px;
+    }
+}
+
+.info-sponsorship {
+    opacity: 1;
+    transition: 2s all;
+}
+
+.info-sponsorship.active {
+    opacity: 0;
+}
+
+#messages-index {
+    img {
+        height: 150px;
+        width: 100%;
+    }
+}
+
+.unread .guest {
+    color: red;
+}
+
+#show-message {
+  h1 {
+    margin-bottom : 30px;
+  }
+}
+
+.data-message {
+  padding-bottom: 30px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.message-text {
+  word-break: break-word;
+}
+
+//statistiche
+.stat-items:hover {
+  color: $main_color;
+}
+//fine statistiche
+
+
+//*fine sezione aggiungi appartamento
+@media screen and (min-width: 768px) {
+    body#bk-office {
+        aside {
+            position: static;
+            transform: translate3d(0,0,0);
+            box-shadow: 10px 15px 19px -18px rgba(255,56,92,0.92);
+        }
+
+        main {
+            width: calc(100% - 250px);
+        }
+    }
+    //inizio sezione aggiungi appartamento
+    .form-group {
+        text-align: center;
+    }
+    //fine sezione aggiungi appartamento
+}
+
+@media screen and (max-width: 576px) {
+    //inizio sezione aggiungi appartamento
+    .numbers-form {
+        display: block;
+    }
+    //fine sezione aggiungi appartamento
+}
+@media screen and (max-width: 768px) {
+    #show-header-right {
+        text-align: left;
+    }
+
+    #show-description {
+        padding-left: 0;
+    }
+}

@@ -1,0 +1,178 @@
+label.error {
+    width: 100%;
+    text-align: center;
+}
+
+label#status_load {
+    width: 100%;
+    margin-top: 8px;
+    text-align: left;
+}
+
+a {
+    color: inherit;
+    &:hover {
+        color: inherit;
+    }
+}
+
+.container {
+    width: 95%;
+}
+
+.ap-name {
+    font-size: 10px;
+}
+
+
+//stile per la lista appartamenti guest e admin
+.box {
+    cursor: default;
+    border-radius: 20px;
+
+    & .row {
+        margin: 0 20px;
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-top: 1px solid rgb(220, 220, 220);
+    }
+
+    .img-container,
+    .text-container {
+        cursor: pointer;
+    }
+
+    img {
+        width: 100%;
+        height: 259px;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin: 5px 0 0 0;
+
+        & + p {
+            font-size: 16px;
+            width: 90%;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow-x: hidden;
+            color: grey;
+        }
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            font-weight: bold;
+
+            span {
+                font-weight: lighter;
+            }
+        }
+    }
+
+    p {
+        font-weight: bold;
+        font-size: 18px;
+        margin: 0;
+
+        span {
+            font-weight: lighter;
+        }
+    }
+}
+
+.form-group {
+    margin: 0;
+}
+
+//barra di ricerca avanzata
+
+.box-advanced-search {
+  background-color: $main_color;
+  border-radius: 12px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.search-bar {
+  background-color: white;
+}
+
+.algolia-places {
+     width: calc(100% - 52px);
+    text-align: left;
+}
+
+.ap-input-icon {
+  display: none;
+}
+
+.services-box {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+
+.search-filter-bar {
+    border: 1px solid #B0B0B0;
+    border-radius: 12px;
+    background-color: white;
+}
+
+#search-filter-button {
+  color: white;
+  background-image: radial-gradient(circle at center center, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%);
+}
+
+#input-filter-search {
+  cursor: text;
+  height: 60px;
+  border: 1px solid #ced4da;
+  border-radius: $border-radius-button;
+}
+
+.number-box-filters {
+    border-radius: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 7px;
+}
+
+#services {
+  margin-bottom: 20px;
+}
+
+.number-services-box {
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.select-option {
+  margin-right: 30px;
+}
+
+.marked a {
+    margin-bottom: 5px;
+    background-color: gold;
+    border: 1px solid $main_color;
+}
+
+//Media query
+
+@media screen and (min-width: 768px) {
+    .algolia-places {
+        width: calc(100% - 98px);
+    }
+
+    .ap-name {
+        font-size: 16px;
+    }
+}
